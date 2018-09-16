@@ -7,17 +7,17 @@ import javax.swing.ImageIcon;
 
 public abstract class Personajes {
 
-	protected String nombre;
-	protected int Hp,damage,x,y,tam,tam1;
-	protected boolean hit;
+	protected String nombre;//NOMBRE DEL PERSONAJE
+	protected int Hp,damage,x,y,tam,tam1;//atributos de posicion, daño y vida
+	protected boolean hit;//saber si hizo contacto con algun objeto
 	
-	private Image imagen;
+	private Image imagen;// en caso de usar imagenes
 	
-	public Personajes() {
+	public Personajes() {//inicia constructor por default
 		nombre="";
 		Hp=0; damage=0;x=0;y=0;tam=0; tam1=0;
-	}
-	public Personajes(String nombre, int x, int y, int HP, int damage, int tam,int tam1) {
+	}//fin del constructor por default
+	public Personajes(String nombre, int x, int y, int HP, int damage, int tam,int tam1) {//inicio de el constructor por paramteros que recibe el nombre la posicion en x y, la vida, el daño del personaje  y su tamaño
 		nombre=this.nombre;
 		x=this.x;
 		y=this.y;
@@ -27,6 +27,7 @@ public abstract class Personajes {
 		tam1=this.tam1;
 		
 	}
+	/*Setter y getters*/
 	public String getNombre() {
 		return nombre;
 	}
@@ -81,14 +82,15 @@ public abstract class Personajes {
 	public void setImagen(Image imagen) {
 		this.imagen = imagen;
 	}
-	//public abstract boolean hit(Arma a) ; //verifica si el da�o fue hecho y registra el da�o hecho
+	//public abstract boolean hit(Arma a) ; //verifica si el daño fue hecho y registra el daño hecho
 	
 	public void paint(Graphics g) {
-		
+		// en caso de que usemos imagenes
 		/*File archivo= new File (nombre);
 		imagen =(new ImageIcon (nombre)).getImage();
 		g.drawImage(imagen, x, y, tam, tam, null);//MiVentana mv; en vez de null Main.mv
 	*/
+		//se crea un rectangulo de color negro como fin de muestra
 		g.setColor(Color.BLACK);
 		g.fillRect(x, y, tam, tam1);
 
