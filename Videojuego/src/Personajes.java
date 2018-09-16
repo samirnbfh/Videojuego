@@ -1,7 +1,7 @@
 /*
 Hecho por Paco C
 15/09/2018
-Clase de personajes donde tiene los atributos de nombre, vida y daño junto con el tamaño del mismo
+Clase de personajes donde tiene los atributos de vida, velocidad, boolean de si esta vivo
 
 */
 import java.awt.Color;
@@ -13,30 +13,27 @@ import javax.swing.ImageIcon;
 
 public abstract class Personajes extends Spawnable {
 
-	protected String nombre;//NOMBRE DEL PERSONAJE
-	protected int Hp,damage,tam,tam1;//atributos de posicion, daño y vida
+	protected int Hp,velocidad;//atributos de vida y velocidad
+	protected boolean alive;//atributo de si esta vivo o no
 	
 	
 	public Personajes() {//inicia constructor por default
-		nombre="";
-		Hp=0; damage=0;tam=0; tam1=0;
+		Hp=0; alive=false; velocidad=0;
 	}//fin del constructor por default
-	public Personajes(String nombre, int HP, int damage, int tam,int tam1) {//inicio de el constructor por paramteros que recibe el nombre, la vida, el daño del personaje  y su tamaño
-		nombre=this.nombre;
-		Hp=this.Hp;
-		damage=this.damage;
-		tam=this.tam;
-		tam1=this.tam1;
+	public Personajes(boolean alive, int HP, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
+		this.alive=alive;
+		this.Hp=Hp;
+		this.velocidad=velocidad;
 		
 	}
 	/*Setter y getters*/
-	//obtiene el nombre del objeto
-	public String getNombre() {
-		return nombre;
+	//obtiene el valor del objeto
+	public boolean getalive() {
+		return alive;
 	}
-	//Modifica el nombre del objeto
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	//Modifica el valor del objeto
+	public void setalive(boolean alive) {
+		this.alive = alive;
 	}
 	//obtiene la vida del objeto
 	public int getHp() {
@@ -46,31 +43,14 @@ public abstract class Personajes extends Spawnable {
 	public void setHp(int hp) {
 		Hp = hp;
 	}
-	//obtiene el daño del objeto
-	public int getDamage() {
-		return damage;
+	//obtiene el velocidad del objeto
+	public int getvelocidad() {
+		return velocidad;
 	}
-	//Modifica el daño del objeto
-	public void setDamage(int damage) {
-		this.damage = damage;
+	//Modifica el velocidad del objeto
+	public void setvelocidad(int velocidad) {
+		this.velocidad = velocidad;
 	}
-	//obtiene el ancho del objeto
-	public int getTam() {
-		return tam;
-	}
-	//Modifica el ancho del objeto
-	public void setTam(int tam) {
-		this.tam = tam;
-	}
-	//obtiene la altura del objeto
-	public int getTam1() {
-		return tam1;
-	}
-	//Modifica la altura del objeto
-	public void setTam1(int tam1) {
-		this.tam1 = tam1;
-	}
-	
 	
 	public abstract paint(Graphics g) ;
 }
