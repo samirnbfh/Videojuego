@@ -13,11 +13,11 @@ public class Heroes extends Personajes {
 			super();
 		}//fin del constructor por default
 		public Heroes(String nombre, int HP, int damage, int tam,int tam1) {//construcotr por parametros que recibe el nombre del heroes con el daño y su tamaño
-			nombre=this.nombre;
-			Hp=this.Hp;
-			damage=this.damage;
-			tam=this.tam;
-			tam1=this.tam1;
+			this.nombre=nombre;
+			this.Hp=Hp;
+			this.damage=damage;
+			this.tam=tam;
+			this.tam1=tam1;
 			
 		}
 }
