@@ -11,14 +11,10 @@ public class Heroes extends Personajes {
 		public Heroes() {//Constructor por default
 			super();
 		}//fin del constructor por default
-<<<<<<< HEAD
-		public Heroes(int x, int y,int tamanioX, int tamanioY,String nombre, boolean spawned,boolean alive, int Hp, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
-			super(x,y,tamanioX,tamanioY,nombre,spawned,alive,Hp,velocidad);
-=======
+
 		public Heroes(int x, int y,int tamanioX, int tamanioY,String nombre, boolean spawned,boolean alive, int HP, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
 			super(x,y,tamanioX,tamanioY,nombre,spawned,alive,HP,velocidad);
->>>>>>> MUDCROSS1507-patch-1
-			
+	
 		}
 	public void paint(Graphics g){
 		g.setColor(Color.BLACK);
