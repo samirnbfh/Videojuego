@@ -1,19 +1,20 @@
-
-
+/*
+Hecha por Paco C
+15/07/2018
+Clase hija de Personajes la cual hereda los atributos y solo se usan los constructores
+*/
 public class Enemigos extends Personajes {
 
-	public Enemigos() {
+	public Enemigos() {//inicio del constrcutor por default
 		super();
-	}
-	public Enemigos(String nombre, int x, int y, int HP, int damage, int tam,int tam1) {
+	}//fin del constructor por default
+	public Enemigos(String nombre, int HP, int damage, int tam,int tam1) {//inicio del constrcutor por parametros que recibe el nombre, la vida y el tamaño
 		nombre=this.nombre;
-		x=this.x;
-		y=this.y;
 		Hp=this.Hp;
 		damage=this.damage;
 		tam=this.tam;
 		tam=this.tam1;
 		
-	}
+	}//fin del constructor por paramteros
 	
-}
+}//fin de la clase
