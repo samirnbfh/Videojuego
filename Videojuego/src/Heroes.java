@@ -12,11 +12,8 @@ public class Heroes extends Personajes {
 		public Heroes() {//Constructor por default
 			super();
 		}//fin del constructor por default
-		public Heroes(boolean alive, int Hp,int velocidad) {//constructor por parametros que recibe el nombre del heroes con el daño y su tamaño
-			super();
-			this.alive=alive;
-			this.Hp=Hp;
-			this.velocidad=velocidad;
+		public Heroes(int x, int y,int tamanioX, int tamanioY,String nombre, boolean spawned,boolean alive, int HP, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
+			super(x,y,tamaniox,tamanioy,nombre,spawned,alive,Hp,velocidad);
 			
 		}
 	public void paint(Graphics g){
