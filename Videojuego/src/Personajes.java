@@ -1,3 +1,9 @@
+/*
+Hecho por Paco C
+15/09/2018
+Clase de personajes donde tiene los atributos de nombre, vida y daño junto con el tamaño del mismo
+
+*/
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -5,22 +11,20 @@ import java.io.File;
 
 import javax.swing.ImageIcon;
 
-public abstract class Personajes {
+public abstract class Personajes extends Spawnable {
 
 	protected String nombre;//NOMBRE DEL PERSONAJE
-	protected int Hp,damage,x,y,tam,tam1;//atributos de posicion, daño y vida
+	protected int Hp,damage,tam,tam1;//atributos de posicion, daño y vida
 	protected boolean hit;//saber si hizo contacto con algun objeto
 	
 	private Image imagen;// en caso de usar imagenes
 	
 	public Personajes() {//inicia constructor por default
 		nombre="";
-		Hp=0; damage=0;x=0;y=0;tam=0; tam1=0;
+		Hp=0; damage=0;tam=0; tam1=0;
 	}//fin del constructor por default
-	public Personajes(String nombre, int x, int y, int HP, int damage, int tam,int tam1) {//inicio de el constructor por paramteros que recibe el nombre la posicion en x y, la vida, el daño del personaje  y su tamaño
+	public Personajes(String nombre, int HP, int damage, int tam,int tam1) {//inicio de el constructor por paramteros que recibe el nombre, la vida, el daño del personaje  y su tamaño
 		nombre=this.nombre;
-		x=this.x;
-		y=this.y;
 		Hp=this.Hp;
 		damage=this.damage;
 		tam=this.tam;
@@ -45,18 +49,6 @@ public abstract class Personajes {
 	}
 	public void setDamage(int damage) {
 		this.damage = damage;
-	}
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
 	}
 	public int getTam() {
 		return tam;
