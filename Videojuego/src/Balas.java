@@ -8,10 +8,12 @@ public class Balas extends Municiones {
 	public Balas() {//inicio del constructor por d
 		super();
 	}//fin del constrcutor por d
-	public Balas(int damage, boolean hit, int tamanio, int tamanio1) {//inicio del constructor por p que recibe daño, y el tamaño
-		hit=this.hit;
-		damage=this.damage;
-		tamanio=this.tamanio;
-		tamanio1=this.tamanio1;
+	public Balas(int damage, int velocidad) {//inicio del constructor por p que recibe daño, y el tamaño
+		this.velocidad=velocidad;
+		this.damage=damage
 	}//fin del constructor por p
+	
+	public void paint(Graphics g){
+	}
+	
 }//fin de la clase
