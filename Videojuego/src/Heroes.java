@@ -12,13 +12,15 @@ public class Heroes extends Personajes {
 		public Heroes() {//Constructor por default
 			super();
 		}//fin del constructor por default
-		public Heroes(String nombre, int HP, int damage, int tam,int tam1) {//construcotr por parametros que recibe el nombre del heroes con el daño y su tamaño
-			this.nombre=nombre;
+		public Heroes(boolean alive, int Hp,int velocidad) {//constructor por parametros que recibe el nombre del heroes con el daño y su tamaño
+			this.alive=alive;
 			this.Hp=Hp;
-			this.damage=damage;
-			this.tam=tam;
-			this.tam1=tam1;
+			this.velocidad=velocidad;
 			
 		}
+	public void paint(Graphics g){
+		
+	
+	}
 }
 	
