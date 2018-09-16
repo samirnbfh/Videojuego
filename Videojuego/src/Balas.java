@@ -1,14 +1,17 @@
+/*
+Hecha  por Paco C
+15/07/2018
+Clase hija de Municiones donde hereda los atributos de Municiones y solo se usan los constructores
+*/
 public class Balas extends Municiones {
 
-	public Balas() {
+	public Balas() {//inicio del constructor por d
 		super();
-	}
-	public Balas(int damage, boolean hit,int x, int y, int tamanio, int tamanio1) {
+	}//fin del constrcutor por d
+	public Balas(int damage, boolean hit, int tamanio, int tamanio1) {//inicio del constructor por p que recibe daño, y el tamaño
 		hit=this.hit;
 		damage=this.damage;
-		x=this.x;
-		y=this.y;
 		tamanio=this.tamanio;
 		tamanio1=this.tamanio1;
-	}
-}
+	}//fin del constructor por p
+}//fin de la clase
