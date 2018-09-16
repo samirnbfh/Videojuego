@@ -6,14 +6,13 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-<<<<<<< HEAD
-=======
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.ListIterator;
->>>>>>> MUDCROSS1507-patch-1
+
 
 import javax.swing.JPanel;
 
@@ -148,12 +147,12 @@ public class GamePanel extends JPanel implements Runnable{
 	 if (!gameOver) {
 	 // do something
 	 }
-<<<<<<< HEAD
+
 	 }
 	
-	}
-=======
-	}
+	
+
+	
 	public void inicializa() {
 		/*genera 50 balas*/
 		int num=0;
@@ -209,24 +208,4 @@ public class GamePanel extends JPanel implements Runnable{
 	
 		
 	 
-	/*private void llenar_imagenes() {
-		File archImagen = new File("imagen_1.gif");
-		try {
-			BufferedImage imagen = ImageIO.read(archImagen);
-			cara_1=imagen;
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
-		archImagen = new File("imagen_2.gif");
-		try {
-			BufferedImage imagen = ImageIO.read(archImagen);
-			cara_2=imagen;
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
-	}*/
- // more methods, explained later...
-	} // end of GamePanel class
->>>>>>> MUDCROSS1507-patch-1
+	} 
