@@ -1,3 +1,9 @@
+/*
+Hecho por Paco C
+15/07/2018
+Clase de Municiones la cual tendra clases hijas dependiendo del tipo de municion que necesite el arma
+con atributos de nombre, daño, y el tamaño
+*/
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -5,21 +11,19 @@ import java.io.File;
 
 import javax.swing.ImageIcon;
 
-public class Municiones {
+public class Municiones extends Spawnable{
 
 	protected String nombre;
 	protected boolean hit;
-	protected int damage,x,y,tamanio,tamanio1;
+	protected int damage,tamanio,tamanio1;
 	private  Image  imagen;
 	public Municiones() {
 		hit=false;
-		damage=0;x=0;y=0;tamanio=0;tamanio1=0;
+		damage=0;tamanio=0;tamanio1=0;
 	}
-	public Municiones(int damage, boolean hit,int x, int y, int tamanio, int tamanio1) {
+	public Municiones(int damage, boolean hit, int tamanio, int tamanio1) {
 		hit=this.hit;
 		damage=this.damage;
-		x=this.x;
-		y=this.y;
 		tamanio=this.tamanio;
 		tamanio1=this.tamanio1;
 	}
@@ -41,18 +45,6 @@ public class Municiones {
 	}
 	public void setDamage(int damage) {
 		this.damage = damage;
-	}
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
 	}
 	public int getTamanio() {
 		return tamanio;
