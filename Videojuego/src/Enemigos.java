@@ -8,13 +8,12 @@ public class Enemigos extends Personajes {
 	public Enemigos() {//inicio del constrcutor por default
 		super();
 	}//fin del constructor por default
-	public Enemigos(String nombre, int HP, int damage, int tam,int tam1) {//inicio del constrcutor por parametros que recibe el nombre, la vida y el tamaño
-		nombre=this.nombre;
-		Hp=this.Hp;
-		damage=this.damage;
-		tam=this.tam;
-		tam=this.tam1;
+	public Enemigos(boolean alive, int Hp, int velocidad) {//inicio del constrcutor por parametros que recibe el nombre, la vida y el tamaño
+		this.alive=alive;
+		this.Hp=Hp;
+		this.velocidad=velocidad;
 		
 	}//fin del constructor por paramteros
-	
+	public void paint(Graphics g){
+	}
 }//fin de la clase
