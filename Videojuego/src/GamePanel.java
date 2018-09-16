@@ -126,23 +126,5 @@ public class GamePanel extends JPanel implements Runnable{
 	 // do something
 	 }
 	 }
-	/*private void llenar_imagenes() {
-		File archImagen = new File("imagen_1.gif");
-		try {
-			BufferedImage imagen = ImageIO.read(archImagen);
-			cara_1=imagen;
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
-		archImagen = new File("imagen_2.gif");
-		try {
-			BufferedImage imagen = ImageIO.read(archImagen);
-			cara_2=imagen;
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
-	}*/
- // more methods, explained later...
-	} // end of GamePanel class
+	
+	}
