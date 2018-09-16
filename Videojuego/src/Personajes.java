@@ -15,9 +15,7 @@ public abstract class Personajes extends Spawnable {
 
 	protected String nombre;//NOMBRE DEL PERSONAJE
 	protected int Hp,damage,tam,tam1;//atributos de posicion, daño y vida
-	protected boolean hit;//saber si hizo contacto con algun objeto
 	
-	private Image imagen;// en caso de usar imagenes
 	
 	public Personajes() {//inicia constructor por default
 		nombre="";
@@ -32,59 +30,47 @@ public abstract class Personajes extends Spawnable {
 		
 	}
 	/*Setter y getters*/
+	//obtiene el nombre del objeto
 	public String getNombre() {
 		return nombre;
 	}
+	//Modifica el nombre del objeto
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	//obtiene la vida del objeto
 	public int getHp() {
 		return Hp;
 	}
+	//Modifica la vida del objeto
 	public void setHp(int hp) {
 		Hp = hp;
 	}
+	//obtiene el daño del objeto
 	public int getDamage() {
 		return damage;
 	}
+	//Modifica el daño del objeto
 	public void setDamage(int damage) {
 		this.damage = damage;
 	}
+	//obtiene el ancho del objeto
 	public int getTam() {
 		return tam;
 	}
+	//Modifica el ancho del objeto
 	public void setTam(int tam) {
 		this.tam = tam;
 	}
+	//obtiene la altura del objeto
 	public int getTam1() {
 		return tam1;
 	}
+	//Modifica la altura del objeto
 	public void setTam1(int tam1) {
 		this.tam1 = tam1;
 	}
-	public boolean isHit() {
-		return hit;
-	}
-	public void setHit(boolean hit) {
-		this.hit = hit;
-	}
-	public Image getImagen() {
-		return imagen;
-	}
-	public void setImagen(Image imagen) {
-		this.imagen = imagen;
-	}
-	//public abstract boolean hit(Arma a) ; //verifica si el daño fue hecho y registra el daño hecho
 	
-	public void paint(Graphics g) {
-		// en caso de que usemos imagenes
-		/*File archivo= new File (nombre);
-		imagen =(new ImageIcon (nombre)).getImage();
-		g.drawImage(imagen, x, y, tam, tam, null);//MiVentana mv; en vez de null Main.mv
-	*/
-		//se crea un rectangulo de color negro como fin de muestra
-		g.setColor(Color.BLACK);
-		g.fillRect(x, y, tam, tam1);
-
-}
+	
+	public abstract paint(Graphics g) ;
 }
