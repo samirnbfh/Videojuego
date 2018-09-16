@@ -8,9 +8,8 @@ public class Balas extends Municiones {
 	public Balas() {//inicio del constructor por d
 		super();
 	}//fin del constrcutor por d
-	public Balas(int damage, int velocidad) {//inicio del constructor por p que recibe daño, y el tamaño
-		this.velocidad=velocidad;
-		this.damage=damage
+	public Balas(int damage, int velocidad, int x, int y,int tamanioX, int tamanioY,String nombre, boolean spawned) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
+		super(damage, velocidad,x,y,tamaniox,tamanioy,nombre,spawned);
 	}//fin del constructor por p
 	
 	public void paint(Graphics g){
