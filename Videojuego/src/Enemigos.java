@@ -9,6 +9,7 @@ public class Enemigos extends Personajes {
 		super();
 	}//fin del constructor por default
 	public Enemigos(boolean alive, int Hp, int velocidad) {//inicio del constrcutor por parametros que recibe el nombre, la vida y el tamaño
+		super();
 		this.alive=alive;
 		this.Hp=Hp;
 		this.velocidad=velocidad;
