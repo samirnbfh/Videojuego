@@ -52,5 +52,4 @@ public abstract class Personajes extends Spawnable {
 		this.velocidad = velocidad;
 	}
 	
-	public abstract paint(Graphics g) ;
 }
