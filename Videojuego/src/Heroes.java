@@ -22,7 +22,7 @@ public class Heroes extends Personajes {
 		}
 	public void paint(Graphics g){
 		g.setColor(Color.BLACK);
-		g.fillRect(50, 50, 20,50);
+		g.fillRect(x, y, 20,50);
 	
 	}
 }
