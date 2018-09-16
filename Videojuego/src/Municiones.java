@@ -11,8 +11,8 @@ con atributos daño, y velocidad
 
 public abstract class Municiones extends Spawnable{
 
-	private int damage; // Daño que causa la municione a otros objeto
-	private int velocidad; //Velocidad a la que se mueve la municion
+	protected int damage; // Daño que causa la municione a otros objeto
+	protected int velocidad; //Velocidad a la que se mueve la municion
 	
 	public Municiones() {
 		super();

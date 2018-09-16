@@ -6,6 +6,14 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+<<<<<<< HEAD
+=======
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.ListIterator;
+>>>>>>> MUDCROSS1507-patch-1
 
 import javax.swing.JPanel;
 
@@ -13,6 +21,7 @@ public class GamePanel extends JPanel implements Runnable{
  /**
 	 * 
 	 */
+
 	private static final long serialVersionUID = 1L;
 	private static final int PWIDTH = 800; // size of panel
 	private static final int PHEIGHT = 600;
@@ -26,6 +35,9 @@ public class GamePanel extends JPanel implements Runnable{
 	private boolean gameOver = false; // for game termination
 	private Graphics dbg;
 	private Image dbImage = null;
+	private Heroes h;
+	private ArrayList <Balas> balas;
+	private boolean shoot=false;
 	//private Image cara_1 = null;
 	//private Image cara_2 = null;
  
@@ -33,11 +45,15 @@ public class GamePanel extends JPanel implements Runnable{
 		x = 0;
 		y= 0;
 		time = 0;
+		h=new Heroes(0,0,20,50,"pepe",true,true,100,10);
+		balas=new ArrayList <Balas>();
 		//llenar_imagenes();
 		setBackground(Color.white); // white background
 		setPreferredSize( new Dimension(PWIDTH, PHEIGHT));
 		setFocusable(true);
 		requestFocus(); // JPanel now receives key events
+		inicializa();
+		movimientosheroe();
 		readyForTermination();
 		addMouseMotionListener( new MouseAdapter() {
 			 public void mouseMoved(MouseEvent e) {
@@ -91,6 +107,13 @@ public class GamePanel extends JPanel implements Runnable{
 		 }*/
 		 dbg.setColor(Color.red);
 		 dbg.fillRect(x-5, y-5, 10, 10);
+		 
+		 ListIterator <Balas> it= balas.listIterator();
+			while(it.hasNext()) {
+				Balas bal= it.next();
+				bal.paint(dbg);
+			}
+		 h.paint(dbg);
 		 if (gameOver)
 			 gameOverMessage(dbg);
 	 	} 
@@ -125,6 +148,85 @@ public class GamePanel extends JPanel implements Runnable{
 	 if (!gameOver) {
 	 // do something
 	 }
+<<<<<<< HEAD
 	 }
 	
 	}
+=======
+	}
+	public void inicializa() {
+		/*genera 50 balas*/
+		int num=0;
+		while(num<=50) {
+			Balas b=new Balas(20,10,h.getX()+1,(h.getY()/2),5,5,"normales",true);//nt damage, boolean hit,int x, int y, int tamanio, int tamanio1
+			balas.add(b);
+			num++;
+		}
+	}
+	private void movimientosheroe(){
+		addKeyListener(new KeyAdapter(){
+			
+			public void KeyPressed(KeyEvent key){
+			if(key.getKeyCode()==37)/*izq*/ {
+			h.setX(h.getX()-20);
+			}
+			else if(key.getKeyCode()==39)/*der*/ {
+			h.setX(h.getX()+20);
+			}
+			else if(key.getKeyCode()==38)/*arriba*/ {
+				h.setY(h.getY()-20);
+			}
+			else if(key.getKeyCode()==40)/*abajo*/ {
+				h.setY(h.getY()+20);
+			}
+			else if(key.getKeyCode()==88) {//por ahora solo con la tecla x se pueden disparar//
+			//falta lo de la bala
+				shoot=true;
+				ListIterator<Balas> it= balas.listIterator();
+				while(it.hasNext()) {
+					Balas bal=it.next();
+					
+					if(shoot==true) {
+						bal.setX(bal.getX()+10);
+					}
+				}
+			}
+			
+			}
+		});
+		addKeyListener(new KeyAdapter(){
+			public void KeyReleased(KeyEvent key){
+			
+			 if(key.getKeyCode()==88) {//por ahora solo con la tecla x se pueden disparar//
+			
+				shoot=false;
+			}
+			}
+		});
+		repaint();
+	}
+	
+	
+		
+	 
+	/*private void llenar_imagenes() {
+		File archImagen = new File("imagen_1.gif");
+		try {
+			BufferedImage imagen = ImageIO.read(archImagen);
+			cara_1=imagen;
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+		archImagen = new File("imagen_2.gif");
+		try {
+			BufferedImage imagen = ImageIO.read(archImagen);
+			cara_2=imagen;
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+	}*/
+ // more methods, explained later...
+	} // end of GamePanel class
+>>>>>>> MUDCROSS1507-patch-1

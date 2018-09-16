@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import java.awt.Color;
+>>>>>>> MUDCROSS1507-patch-1
 import java.awt.Graphics;
 
 /*
@@ -5,6 +9,7 @@ Hecha  por Paco C
 15/07/2018
 Clase hija de Municiones donde hereda los atributos de Municiones y solo se usan los constructores
 */
+
 public class Balas extends Municiones {
 
 	public Balas() {//inicio del constructor por d
@@ -15,6 +20,8 @@ public class Balas extends Municiones {
 	}//fin del constructor por p
 	
 	public void paint(Graphics g){
+		g.setColor(Color.BLACK);
+		g.fillOval(x,y ,tamanioX,tamanioY);
 	}
 	
 	

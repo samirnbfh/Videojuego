@@ -11,12 +11,12 @@ import java.awt.Graphics;
 
 public abstract class Spawnable {
 	
-	private int x; //Posicion de x del objeto que se va a instanciar
-	private int y; //Posicion de y del objeto que se va a instanciar
-	private int tamanioX; //Tamaño que tiene el objeto en X 
-	private int tamanioY; //Tamaño que tiene el objeto en Y
-	private String nombre; //Nombre (id) del objeto
-	private boolean spawned; //True= el objeto esta instanciado en el canvas, False: el objeto no esta instanciado en el canvas
+	protected int x; //Posicion de x del objeto que se va a instanciar
+	protected int y; //Posicion de y del objeto que se va a instanciar
+	protected int tamanioX; //Tamaño que tiene el objeto en X 
+	protected int tamanioY; //Tamaño que tiene el objeto en Y
+	protected String nombre; //Nombre (id) del objeto
+	protected boolean spawned; //True= el objeto esta instanciado en el canvas, False: el objeto no esta instanciado en el canvas
 	
 	public Spawnable() {
 		x = 0;
