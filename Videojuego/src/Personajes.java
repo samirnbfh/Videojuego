@@ -20,7 +20,8 @@ public abstract class Personajes extends Spawnable {
 	public Personajes() {//inicia constructor por default
 		Hp=0; alive=false; velocidad=0;
 	}//fin del constructor por default
-	public Personajes(boolean alive, int HP, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
+	public Personajes(int x, int y,int tamanioX, int tamanioY,String nombre, boolean spawned,boolean alive, int HP, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
+		super(x,y,tamaniox,tamanioy,nombre,spawned);
 		this.alive=alive;
 		this.Hp=Hp;
 		this.velocidad=velocidad;
