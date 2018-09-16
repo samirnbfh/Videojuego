@@ -17,6 +17,7 @@ public class GamePanel extends JPanel implements Runnable{
  /**
 	 * 
 	 */
+
 	private static final long serialVersionUID = 1L;
 	private static final int PWIDTH = 800; // size of panel
 	private static final int PHEIGHT = 600;
@@ -30,6 +31,7 @@ public class GamePanel extends JPanel implements Runnable{
 	private boolean gameOver = false; // for game termination
 	private Graphics dbg;
 	private Image dbImage = null;
+	private Heroes h;
 	//private Image cara_1 = null;
 	//private Image cara_2 = null;
  
@@ -37,12 +39,14 @@ public class GamePanel extends JPanel implements Runnable{
 		x = 0;
 		y= 0;
 		time = 0;
+		h=new Heroe();
 		//llenar_imagenes();
 		setBackground(Color.white); // white background
 		setPreferredSize( new Dimension(PWIDTH, PHEIGHT));
 		setFocusable(true);
 		requestFocus(); // JPanel now receives key events
 		readyForTermination();
+		addKeyListener();
 		addMouseMotionListener( new MouseAdapter() {
 			 public void mouseMoved(MouseEvent e) {
 				 testPress(e.getX(), e.getY());
@@ -129,6 +133,30 @@ public class GamePanel extends JPanel implements Runnable{
 	 if (!gameOver) {
 	 // do something
 	 }
+	public void movimientosheroe(){
+		addKeyListener(new KeyAdapter(){
+			public void KeyPressed(KeyEvent key){
+			if(key.getKeyCode()==37)/*izq*/ {
+			h.setX(h.getX()-20);
+			}
+			else if(key.getKeyCode()==39)/*der*/ {
+			h.setX(h.getX()+20);
+			}
+			else if(key.getKeyCode()==38)/*arriba*/ {
+				h.setY(h.getY()-20);
+			}
+			else if(key.getKeyCode()==40)/*abajo*/ {
+				h.setY(h.getY()+20);
+			}
+			else if(key.getKeyCode()==88) {//por ahora solo con la tecla x se pueden disparar//
+			//falta lo de la bala
+			}
+			}
+		}
+	});
+	
+	}
+		
 	 }
 	/*private void llenar_imagenes() {
 		File archImagen = new File("imagen_1.gif");
