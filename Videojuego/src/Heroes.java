@@ -13,11 +13,12 @@ public class Heroes extends Personajes {
 			super();
 		}//fin del constructor por default
 		public Heroes(int x, int y,int tamanioX, int tamanioY,String nombre, boolean spawned,boolean alive, int HP, int velocidad) {//inicio de el constructor por paramteros que recibe si esta vivo, la vida, velocidad
-			super(x,y,tamaniox,tamanioy,nombre,spawned,alive,Hp,velocidad);
+			super(x,y,tamanioX,tamanioY,nombre,spawned,alive,HP,velocidad);
 			
 		}
 	public void paint(Graphics g){
-		
+		g.setColor(Color.BLACK);
+		g.fillRect(50, 50, 20,50);
 	
 	}
 }
