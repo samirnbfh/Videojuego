@@ -7,15 +7,15 @@ import javax.swing.ImageIcon;
 
 public class Municiones {
 
-	protected String nombre;
-	protected boolean hit;
-	protected int damage,x,y,tamanio,tamanio1;
-	private  Image  imagen;
-	public Municiones() {
+	protected String nombre;//nombre de las balas
+	protected boolean hit;//verifica si hubo impacto
+	protected int damage,x,y,tamanio,tamanio1;//atributos de daño, posicion y tamaño
+	private  Image  imagen;//por si se usa una imagen
+	public Municiones() {//constructor por default
 		hit=false;
 		damage=0;x=0;y=0;tamanio=0;tamanio1=0;
-	}
-	public Municiones(int damage, boolean hit,int x, int y, int tamanio, int tamanio1) {
+	}//fin del constructor por default
+	public Municiones(int damage, boolean hit,int x, int y, int tamanio, int tamanio1) {//construcutor por parametros recibe el daño, posicion en x y , y el tamaño
 		hit=this.hit;
 		damage=this.damage;
 		x=this.x;
@@ -23,7 +23,7 @@ public class Municiones {
 		tamanio=this.tamanio;
 		tamanio1=this.tamanio1;
 	}
-	
+	/*Setters y getters*/
 	public String getNombre() {
 		return nombre;
 	}
@@ -72,6 +72,7 @@ public class Municiones {
 	public void setImagen(Image imagen) {
 		this.imagen = imagen;
 	}
+	//paint
 	public void paint(Graphics g) {
 		/*
 		File archivo=new File(nombre);
@@ -79,6 +80,7 @@ public class Municiones {
 			imagen= (new ImageIcon(nombre)).getImage();
 				g.drawImage(imagen,x,y,tamanio, tamanio1, null);
 		*/
+		//Se pinta de color negro bolitas
 		g.setColor(Color.BLACK);
 		g.fillOval(x, y, tamanio, tamanio1);
 	}
